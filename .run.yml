@@ -1,0 +1,56 @@
+spec: 1
+version: 1.0.0
+authors:
+  - Sebastian Döll <sebastian@katallaxie.me>
+homepage: https://github.com/katallaxie/run
+repository: https://github.com/katallaxie/run
+tasks:
+  foo:
+    disabled: true
+  test:
+    default: true
+    cmd:
+      - echo "{{.OS}}"
+    watch:
+      paths:
+        - pkg/config
+    template:
+      - 
+        file: ./examples/config.json.tpl
+        out: ./config.json
+        var:
+          project: run
+    steps:
+      - uses: examples/plugin
+        cmd: echo "{{.OS}}"
+      - cmd: go test -cover -p 1 -race -v ./...
+  build:
+    depends-on:
+      - test
+    vars:
+      region: eu-west-1
+    env:
+      REGION: eu-west-1
+    watch:
+      paths:
+        - examples
+      ignore:
+        - .gitignore
+        - .run.yml
+    template:
+      - 
+        file: ./examples/config.json.tpl
+        out: ./config.json
+        vars:
+          foo: bar
+    steps:
+      - name: "demo"
+      - cmd: exit 1;
+        continue-on-error: true
+      - cmd: |
+          echo "{{.OSR}"
+          echo "{{.Dir}}"
+      - cmd: |
+          echo "building on {{.OS}}"
+          goreleaser build --snapshot --rm-dist
+      

@@ -1,0 +1,38 @@
+spec: 1
+version: 1
+author: Sebastian Döll <sebastian@katallaxie.me>
+tasks:
+  release:
+    desc: release
+    cmds:
+      - gox -output "bin/{{.Dir}}_{{.OS}}_{{.Arch}}" -ldflags "-s -w -X github.com/katallaxie/run/version.Version=${TRAVIS_TAG}" -os="linux" -os="darwin" -arch="386" -arch="amd64" ./
+  test:
+    disable: true
+    desc: test
+    vars:
+      region:
+        - test
+    cmds:
+      - go test -v ./...
+  build:
+    default: true
+    deps:
+      - test
+    vars:
+      region:
+        - test
+    cmds:
+      - go build
+    watch:
+      paths:
+        - examples
+      ignore:
+        - .gitignore
+        - .run.yml
+    templates:
+      - 
+        file: ./examples/config.json.tpl
+        output: ./config.json
+        vars:
+          foo: bar
+      

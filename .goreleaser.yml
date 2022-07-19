@@ -1,0 +1,77 @@
+builds:
+  - 
+    id: action
+    binary: action-{{.Os}}-{{ .Arch }}
+    main: ./cmd/action/main.go
+    goos:
+      - linux
+    goarch:
+      - amd64
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+        - -s -w
+    no_unique_dist_dir: true
+
+  - 
+    id: run
+    binary: run-{{.Os}}-{{ .Arch }}
+    main: main.go
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - 386
+      - amd64
+      - arm
+      - arm64
+    ignore:
+        - goos: darwin
+          goarch: 386
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+        - -s -w
+    no_unique_dist_dir: true
+
+archives:
+  -
+    id: action
+    builds:
+      - action
+    name_template: "action_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+  -
+    id: run
+    builds:
+      - run
+    name_template: "run_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+brews:
+  -
+    name: run
+    ids:
+      - run
+    tap: 
+      owner: katallaxie
+      name: run-tap
+    folder: Formula
+    goarm: "7"
+    homepage: https://andersnormal.github.io/run/
+    dependencies:
+      - name: go
+        type: optional
+    install: |-
+      bin.install "run"
+
+gomod:
+  proxy: true
+
+release:
+  draft: true
+
+snapshot:
+  name_template: "{{.Tag}}"
+
+checksum:
+  name_template: "run_checksums.txt"
