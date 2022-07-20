@@ -57,7 +57,7 @@ brews:
       name: run-tap
     folder: Formula
     goarm: "7"
-    homepage: https://andersnormal.github.io/run/
+    homepage: https://katallaxie.github.io/run/
     dependencies:
       - name: go
         type: optional
