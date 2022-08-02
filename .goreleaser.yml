@@ -54,7 +54,7 @@ brews:
       - run
     tap: 
       owner: katallaxie
-      name: run-tap
+      name: homebrew-run-tap
     folder: Formula
     goarm: "7"
     homepage: https://katallaxie.github.io/run/
