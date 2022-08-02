@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/andersnormal/pkg/utils"
+	"github.com/andersnormal/pkg/utils/files"
 	gg "github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing/object"
 	"github.com/go-git/go-git/v5/storage/memory"
@@ -41,7 +41,7 @@ func (g *git) CloneWithContext(ctx context.Context, url string, folder string) e
 		return err
 	}
 
-	empty, err := utils.IsDirEmpty(path)
+	empty, err := files.IsDirEmpty(path)
 	if err != nil && !os.IsNotExist(err) {
 		return err
 	}

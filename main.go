@@ -9,7 +9,7 @@ import (
 	"runtime/debug"
 	"time"
 
-	"github.com/andersnormal/pkg/utils"
+	"github.com/andersnormal/pkg/utils/files"
 	"github.com/katallaxie/run/pkg/config"
 	"github.com/katallaxie/run/pkg/plugin"
 	"github.com/katallaxie/run/pkg/runner"
@@ -131,7 +131,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		ok, err := utils.FileExists(cfg.File)
+		ok, err := files.FileExists(cfg.File)
 		if err != nil {
 			log.Fatal(err)
 		}

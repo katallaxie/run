@@ -14,6 +14,8 @@ github.com/acomagu/bufpipe v1.0.3 h1:fxAGrHZTgQ9w5QqVItgzwj235/uYZYgbXitB+dLupOk
 github.com/acomagu/bufpipe v1.0.3/go.mod h1:mxdxdup/WdsKVreO5GpW4+M/1CE2sMG4jeGJ2sYmHc4=
 github.com/andersnormal/pkg v0.0.0-20220715145430-119c43b2a60d h1:J8PsRzJUKEfEManVh26S9XAK1CAgvH06uZqD1C0nuVs=
 github.com/andersnormal/pkg v0.0.0-20220715145430-119c43b2a60d/go.mod h1:5X1vLfbOn1egbCcOjJyikyV13xgNmEj5Bn3rd8SCr9c=
+github.com/andersnormal/pkg v0.0.0-20220731072119-865d78838eee h1:XJVMYUloPhoOWFw7e7GU26JllmiWv4363h4MMIm6GeY=
+github.com/andersnormal/pkg v0.0.0-20220731072119-865d78838eee/go.mod h1:ptP3yO9mArYs8vVZI3HVjJmx6+vSiPlq01vVXjnHWKk=
 github.com/anmitsu/go-shlex v0.0.0-20161002113705-648efa622239 h1:kFOfPq6dUM1hTo4JG6LR5AXSUEsOjtdm0kw0FtQtMJA=
 github.com/anmitsu/go-shlex v0.0.0-20161002113705-648efa622239/go.mod h1:2FmKhYUyUczH0OGQWaF5ceTx0UBShxjsH6f8oGKYe2c=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
