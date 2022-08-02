@@ -270,8 +270,6 @@ func (t *Task) Run(ctx context.Context, opts ...RunOpt) error {
 			ff[k] = v
 		}
 
-		fmt.Println(template.Vars)
-
 		gen := tmpl.New(tmpl.WithExtraFields(ff))
 		err := gen.ApplyFile(template.File, template.Out)
 		if err != nil {
