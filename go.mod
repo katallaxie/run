@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/andersnormal/pkg v0.0.0-20220731072119-865d78838eee
 	github.com/go-git/go-git/v5 v5.4.2
-	github.com/go-playground/validator/v10 v10.11.0
+	github.com/go-playground/validator/v10 v10.11.1
 	github.com/go-task/slim-sprig v2.20.0+incompatible
 	github.com/hashicorp/go-hclog v0.14.1
 	github.com/hashicorp/go-plugin v1.4.4
