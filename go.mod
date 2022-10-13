@@ -9,7 +9,7 @@ require (
 	github.com/go-task/slim-sprig v2.20.0+incompatible
 	github.com/hashicorp/go-hclog v0.14.1
 	github.com/hashicorp/go-plugin v1.4.4
-	github.com/sethvargo/go-githubactions v1.0.0
+	github.com/sethvargo/go-githubactions v1.1.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.0
 	go.uber.org/zap v1.21.0
@@ -48,7 +48,7 @@ require (
 	github.com/oklog/run v1.0.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
-	github.com/sethvargo/go-envconfig v0.6.0 // indirect
+	github.com/sethvargo/go-envconfig v0.8.0 // indirect
 	github.com/xanzy/ssh-agent v0.3.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
