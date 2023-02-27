@@ -11,7 +11,7 @@ require (
 	github.com/hashicorp/go-plugin v1.4.4
 	github.com/sethvargo/go-githubactions v1.0.0
 	github.com/spf13/pflag v1.0.5
-	github.com/stretchr/testify v1.8.0
+	github.com/stretchr/testify v1.8.2
 	go.uber.org/zap v1.21.0
 	golang.org/x/exp v0.0.0-20220613132600-b0d781184e0d
 	google.golang.org/grpc v1.48.0
