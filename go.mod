@@ -8,7 +8,7 @@ require (
 	github.com/go-playground/validator/v10 v10.11.0
 	github.com/go-task/slim-sprig v2.20.0+incompatible
 	github.com/hashicorp/go-hclog v0.14.1
-	github.com/hashicorp/go-plugin v1.4.4
+	github.com/hashicorp/go-plugin v1.4.9
 	github.com/sethvargo/go-githubactions v1.0.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.0
